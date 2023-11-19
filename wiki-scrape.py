@@ -13,7 +13,7 @@ topics = soup.find_all("li", class_="list_wrap show active")
 with open("output.txt", mode="w", encoding="utf-8") as txt_file:
     for topic in topics:
         topic_title = topic.find("h2").text.strip()
-        subtopic_links = topic.find_all("a", class_="categoryTab")  # Substitua "categoryTab" pela classe real do link
+        subtopic_links = topic.find_all("a", class_="categoryTab")
 
         for subtopic_link in subtopic_links:
             subtopic_url = subtopic_link["href"]
